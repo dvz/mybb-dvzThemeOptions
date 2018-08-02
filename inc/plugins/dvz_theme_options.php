@@ -23,7 +23,7 @@ require MYBB_ROOT . 'inc/plugins/dvz_theme_options/hooks_frontend.php';
 \dvzThemeOptions\addHooksNamespace('dvzThemeOptions\Hooks');
 
 // init
-define('dvzThemeOptions\DEVELOPMENT_MODE', 1);
+define('dvzThemeOptions\DEVELOPMENT_MODE', 0);
 
 // MyBB plugin system
 function dvz_theme_options_info()
