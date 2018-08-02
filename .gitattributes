@@ -1,0 +1,8 @@
+.gitattributes export-ignore
+.gitignore export-ignore
+.gitkeep export-ignore
+/README.md export-ignore
+/LICENSE.md export-ignore
+/SECURITY.md export-ignore
+
+/ThemeOptions.js export-ignore
