@@ -60,6 +60,13 @@ function dvz_theme_options_uninstall()
     $cache->delete('dvz_theme_options');
 }
 
+function dvz_theme_options_is_installed()
+{
+    global $cache;
+
+    return $cache->read('dvz_theme_options') !== false;
+}
+
 function dvz_theme_options_activate()
 {
     \dvzThemeOptions\reloadOptionsCache();
