@@ -12,7 +12,7 @@ function ThemeOptions(themeId)
     {
         // set manually to save name with sqaure brackets
         document.cookie = cookiePrefix + 'theme_options[' + themeId + '][' + option + ']=' + optionCase + '; ' +
-            'domain=' + cookieDomain + '; ' +
+            (cookieDomain !== '' ? 'domain=' + cookieDomain + '; ' : '') +
             'path=' + cookiePath + '; ' +
             'max-age=31536000; ' +
             (cookieSecureFlag == true ? 'secure; ' : '');
