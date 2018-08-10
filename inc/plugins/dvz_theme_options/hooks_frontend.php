@@ -40,7 +40,12 @@ function xmlhttp()
 
         $themeNameNormalized = strtolower($theme['name']);
 
-        $userOptions = &$mybb->cookies['theme_options'][$themeNameNormalized];
+        if (isset($mybb->cookies['theme_options'][$themeNameNormalized]) && is_array($mybb->cookies['theme_options'][$themeNameNormalized])) {
+            $userOptions = $mybb->cookies['theme_options'][$themeNameNormalized];
+        } else {
+            $userOptions = [];
+        }
+
 
         $stylesheets = null;
         $editortheme = null;
